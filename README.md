@@ -26,15 +26,15 @@ curl -X DELETE http://127.0.0.1:5000/recipes/1
 
 ## Endpoints
 
-| Method | Path | Success | Errors |
-|---|---|---|---|
-| GET | /recipes | 200 | |
-| GET | /recipes/&lt;id&gt; | 200 | 404 |
-| POST | /recipes | 201 | 400 bad body · 409 duplicate title |
-| PATCH | /recipes/&lt;id&gt; | 200 | 400 · 404 · 409 |
-| DELETE | /recipes/&lt;id&gt; | 204 | 404 |
+| Method | Path                | Success | Errors                             |
+| ------ | ------------------- | ------- | ---------------------------------- |
+| GET    | /recipes            | 200     |                                    |
+| GET    | /recipes/&lt;id&gt; | 200     | 404                                |
+| POST   | /recipes            | 201     | 400 bad body · 409 duplicate title |
+| PATCH  | /recipes/&lt;id&gt; | 200     | 400 · 404 · 409                    |
+| DELETE | /recipes/&lt;id&gt; | 204     | 404                                |
 
 `is_public` is stored on every recipe but nothing enforces it yet - by the end
 of Unit 3, private recipes will only be visible to their owners.
 
-Coursework fork by thejunkyardberserker - 2026-11-05
+Coursework fork by senileviking - 2026-11-05
