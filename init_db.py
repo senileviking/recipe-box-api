@@ -2,6 +2,7 @@
 
 import sqlite3
 
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS recipes (
     id INTEGER PRIMARY KEY,
@@ -10,7 +11,17 @@ CREATE TABLE IF NOT EXISTS recipes (
     instructions TEXT NOT NULL DEFAULT '',
     is_public INTEGER NOT NULL DEFAULT 1
 );
+
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT NOT NULL UNIQUE,
+    email TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 """
+
+
 
 SEED = [
     (
